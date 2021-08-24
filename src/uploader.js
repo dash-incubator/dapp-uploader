@@ -33,7 +33,7 @@ async function save(data) {
     let { description, name, repository, version } = data;
 
     console.log((id ? 'Updating' : 'Creating') + ' Dash Platform Document');
-    console.log( await manifest.save([{ description, ipfs: cid, id, name, repository, version }]) );
+    console.log( await manifest.save([{ description, ipfs: cid, name, repository, version }]) );
 
     if (id) {
         alert.success(`Successfully updated DApp: ${id}`);
