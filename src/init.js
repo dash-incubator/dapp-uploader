@@ -42,11 +42,11 @@ const init = async () => {
     else {
         alert.error(`Deposit tDash in <b>${wallet.address}</b> to continue`);
 
-        setTimeout(init, (1000 * 60));
+        setTimeout(init, (1000 * 45));
 
         initialized = true;
     }
 };
 
 
-emitter.on('components.mounted', init);
+emitter.once('components.mounted', init);

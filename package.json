@@ -37,7 +37,7 @@
         "-": "-",
         "css:build": "webpack --config node_modules/ui/webpack.sass.config.js --env=input=./src --env=output=./dist/css",
         "--": "--",
-        "js:build": "webpack --config webpack.javascript.config.js --env=input={%INIT_CWD%/src,%INIT_CWD%/node_modules/ui} --env=output=%INIT_CWD%/dist/js --env=production=false"
+        "js:build": "webpack --config webpack.javascript.config.js --env=input={%INIT_CWD%/src,%INIT_CWD%/node_modules/ui} --env=output=%INIT_CWD%/dist/js --env=production=true"
     },
     "version": "0.0.1"
 }
