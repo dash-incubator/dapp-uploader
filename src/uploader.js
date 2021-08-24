@@ -30,10 +30,15 @@ function ignore(path) {
 }
 
 async function save(data) {
-    let { description, name, repository, version } = data;
+    let { description, name, repository, version } = data,
+        doc = { description, ipfs: cid, name, repository, version };
+
+    if (id) {
+        doc.id = id;
+    }
 
     console.log((id ? 'Updating' : 'Creating') + ' Dash Platform Document');
-    console.log( await manifest.save([{ description, ipfs: cid, name, repository, version }]) );
+    console.log( await manifest.save([doc]) );
 
     if (id) {
         alert.success(`Successfully updated DApp: ${id}`);
