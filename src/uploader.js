@@ -37,8 +37,7 @@ async function save(data) {
         doc.id = id;
     }
 
-    console.log((id ? 'Updating' : 'Creating') + ' Dash Platform Document');
-    console.log( await manifest.save([doc]) );
+    await manifest.save([doc])
 
     if (id) {
         alert.success(`Successfully updated DApp: ${id}`);

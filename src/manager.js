@@ -104,8 +104,6 @@ const del = {
 
         this.element.classList.add('button--processing');
 
-        console.log(`Deleting Dash Platform Document: ${id}`);
-
         await manifest.delete([cache[id]]);
 
         alert.success(`Successfully deleted DApp: ${id}`);
